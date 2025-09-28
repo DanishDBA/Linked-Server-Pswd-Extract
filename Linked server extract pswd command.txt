@@ -1,0 +1,24 @@
+Ref link
+
+https://www.richardswinbank.net/admin/extract_linked_server_passwords
+
+https://www.netspi.com/blog/technical-blog/adversary-simulation/decrypting-mssql-database-link-server-passwords/
+
+
+To run it:
+
+open a cmd window (with admin privileges);
+cd to the folder containing the script file like below & execute below;
+
+
+powershell -ExecutionPolicy ByPass -command "& { . .\decrypt.ps1; Get-MSSQLLinkPasswords }"
+
+
+Above will display the output in CMD
+If we want to save it in one of the notepad file then execute below command
+
+
+powershell -ExecutionPolicy ByPass -command "& { . .\decrypt.ps1; Get-MSSQLLinkPasswords }">linkpswd.txt
+
+
+It will save the output in linkpswd.txt file
